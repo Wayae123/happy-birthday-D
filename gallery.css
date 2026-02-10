@@ -13,7 +13,7 @@
 
 .gallery > img {
   grid-area: 1/1;
-  width: 20vw;
+  width: 18vw;
   aspect-ratio: 1;
   object-fit: cover;
   border: 10px solid #f2f2f2;
