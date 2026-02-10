@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+     <p>
+ aku harap tak siapapun yg dapat melihat ruang personal ini <br>
+ <br>
+
+Cerita ini dimulai dari Awal kita berjumpa pada awalnya aku sangat skeptis ama diri mu soalnya u sangat menjengkelkan tapi entah kenapa hal itulah yg membuat semua ini sangat menyenangkan analogi nya sama seperti batu, batu itu keras bukan? tapi jika dia diteteskan oleh air terus menerus ia akan berubah, seperti itulah yg terjadi pada masa itu. Hari demi hari rasa itu muncul dan terus menghantui ku, aku selalu menunggu waktu yg tepat untuk mengungkapkan nya tapi apa, lagi lagi aku merasa gagal dikarenakan aku tidak punya apa apa dan aku merasa tak layak untuk siapapun, jadi hari demi hari bukannya ku ungkapkan tapi aku memilih untuk belajar berkembang karna aku sudah tertinggal jauh oleh siapapun dan agar melayakkan diri agar punya value diri namun akhirnya hari itu tiba  aku melihat mu sudah bersama orang lain pada awalnya aku merasa biasa saja soalnya manusia tak berhak menilai manusia lainnya tapi entah kenapa bila aku mengingat ingat ini semua aku merasakan seperti keracunan tapi bedanya disini racunnya terpicu bila aku mengingat nya saja dsini aku merasa sangat terjatuh dan terpukul diperparah dengan skenario teman teman ku sudah pada meninggalkan ku hari demi hari kewarasan ku terkikis oleh kesendirian aku seperti tak bisa berpikir layaknya manusia pada umumnya moralitas ku di ambang kehancuran aku sempat berpikir hal hal lainya tapi aku tersadar ketika aku terpikir untuk meneruskan perkembangan ku yg sebelum sebelum nya terhentikan, lalu apa yg pertama kali terpikir oleh ku ketika ingin berkembang ya benar membuat ucapan selamat ini aku kemudian membuat semua ini sambil mersakan racun yg aktif setiap menitnya dan yap aku juga akhirnya menemukan gairah hidup ku kembali dan tanpa ku sadari racun itu telah hilang bukan karena perkembangan tadi tapi karna sudah kurelakan dirimu itu tapi tenang kau masih mempunyai memorial spesial yg tersimpan diotakku. Terimakasih karna telah mendengarkan sedikit dari ceritaku.... -ReDemon'o
+
+
+
+
+
+    </p>
+    
+ <audio src="music/Hisohkah - School Rooftop Intro Slowed Down.mp3"  
+        autoplay loop preload="auto" id="music"></audio>
+<script>
+  const resetBtn = document.querySelector(".reset button");
+  const resetSound = document.getElementById("resetSound");
+  const music = document.getElementById("music");
+
+  // 🔑 Trigger user interaction + delay 5 detik
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.volume = 0.4;
+
+      setTimeout(() => {
+        music.play().catch(() => {});
+      }, 8000); // ⏱️ 5 detik
+    }
+  }, { once: true });
+
+  // 🔘 RESET SOUND (tetap normal)
+  resetBtn.addEventListener("click", () => {
+    resetSound.pause();
+    resetSound.currentTime = 0;
+    resetSound.play();
+  });
+</script>
+
+ <a href="kata.html">sebelumnya</a>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="openingcss.css">
+    <title>hiii :D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+ 
+    <script>
+(function () {
+  // Buat popup
+  const popup = document.createElement("div");
+  popup.id = "rotate-popup";
+
+  popup.innerHTML = `
+    <div style="
+      background:#111;
+      color:#fff;
+      padding:25%;
+      border-radius:14%;
+      text-align:center;
+      max-width:39%;
+      font-family:Arial,sans-serif;
+    ">
+      <h2 style="margin-bottom:100px;">🔄 Putar Layar</h2>
+      <p>Silakan putar HP ke mode <b>landscape</b> untuk pengalaman terbaik</p>
+    </div>
+  `;
+
+  // Style popup (FULLSCREEN)
+  Object.assign(popup.style, {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    background: "rgba(0,0,0,0.85)",
+    display: "none",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 99999
+  });
+
+  document.body.appendChild(popup);
+
+  // Function cek orientasi
+  function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+      popup.style.display = "flex"; // portrait
+    } else {
+      popup.style.display = "none"; // landscape
+    }
+  }
+
+  window.addEventListener("load", checkOrientation);
+  window.addEventListener("resize", checkOrientation);
+})();
+
+
+
+</script>
+
+
+
+ 
+
+   
+    
+    <div class="layang">
+    <img src="png/bw1.png" alt="">
+    <img src="png/b3.png" alt="">
+    <img src="png/bw1.png" alt="">
+    <img src="png/b1.png" alt="">
+    <img src="png/bw1.png" alt="">
+    <img src="png/bw2.png" alt="">
+    <img src="png/b1.png" alt="">
+    <img src="png/b3.png" alt="">
+    <img src="png/bw2.png" alt="">
+    <img src="png/bw2.png" alt="">
+    <img src="png/b3.png" alt="">
+    <img src="png/b1.png" alt="">
+    <img src="png/bw2.png " alt="">
+    <img src="png/b1.png" alt="">
+    <img src="png/b1.png" alt="">
+    <img src="png/bw1.png" alt="">
+    <img src="png/bw1.png" alt="">
+
+    <img src="png/bw1.png" alt="">
+    <img src="png/b3.png" alt="">
+    <img src="png/bw1.png" alt="">
+    <img src="png/b1.png" alt="">
+    <img src="png/bw1.png" alt="">
+
+    <img src="png/b1.png" alt="">
+    <img src="png/b1.png" alt="">
+    </div>
+
+    
+ <div class="judul"><p class="teek show" id="triggerText">Klik Disini :3</p>
+</div>
+
+ <div id="gambar" class="scene">
+    <img src="gif/flower.gif" alt="" class="red right">
+    <img src="gif/flower.gif" alt="" class="red left">
+    <img src="gif/04e9b4f3017c13bb2d567d9e7650bed1.gif" alt="" class="pink">
+   <a href="surat-manies.html"><img src="gif/image05.gif" alt="" class="blue"
+   src="gif/image05.gif"
+     alt=""
+     class="blue show"
+     id="mainImage"
+     data-next="gif/cake-birthday-cake.gif"></a>
+>
+  <img
+  id="orangeLeft"
+  class="orange left show"
+  src="gif/1820264_9c196.gif"
+  data-next="gif/bad.gif"
+>
+
+<img
+  id="orangeRight"
+  class="orange right show"
+  src="gif/1820264_9c196.gif"
+  data-next="gif/bad.gif"
+>
+
+
+
+     <!--<img src="gif/1820264_9c196.gif" alt="" class="orange right">
+    <img src="gif/1820264_9c196.gif" alt="" class="orange left">-->
+    <img src="gif/368ec01048811d56a61956284a88bfe2.gif" alt="" class="white left">
+    <img src="gif/3478588lgrh1qo3uu.gif" alt="" class="green">
+    <img src="gif/368ec01048811d56a61956284a88bfe2.gif" alt="" class="white right">
+    </div>
+ <script>
+    (function () {
+      /* popup rotate code kamu */
+    })();
+  </script>
+
+  <!-- === SEMUA HTML KAMU === -->
+  <p class="teek show" id="triggerText">Klik Disini :3</p>
+
+  <div class="scene">
+    <a href=""><img src="gif/image05.gif"
+         class="blue show"
+         id="mainImage"
+         data-original ="gif/image05.gif"
+         data-next="gif/happy.gif"
+         ></a>
+  </div><audio id="clickSound" preload="auto">
+  <source src="music/_Yippee_Sound_Effect_48kbps.webm" type="audio/mpeg">
+</audio>
+
+<!--
+ <script>
+
+
+
+const text = document.getElementById("triggerText");
+
+const targets = [
+  document.getElementById("mainImage"),
+  document.getElementById("orangeLeft"),
+  document.getElementById("orangeRight")
+];
+
+let toggled = false;
+let locked = false;
+
+targets.forEach(img => {
+  img.dataset.original = img.src;
+});
+
+text.addEventListener("click", () => {
+  if (locked) return;
+  locked = true;
+
+  // SEMUA HILANG
+  [...targets, text].forEach(el => {
+    el.classList.remove("show");
+    el.classList.add("hide");
+  });
+
+  setTimeout(() => {
+    targets.forEach(img => {
+      img.src = toggled
+        ? img.dataset.original
+        : img.dataset.next;
+    });
+
+    text.textContent = toggled
+      ? "Klik disini :3"
+      : "Happy Birthday :3";
+
+    toggled = !toggled;
+
+    // MUNCUL LAGI
+    [...targets, text].forEach(el => {
+      el.classList.remove("hide");
+      requestAnimationFrame(() => el.classList.add("show"));
+    });
+
+    locked = false;
+  }, 800);
+  
+});
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const text = document.getElementById("triggerText");
+  const sound = document.getElementById("clickSound");
+
+  const targets = [
+    document.getElementById("mainImage"),
+    document.getElementById("orangeLeft"),
+    document.getElementById("orangeRight")
+  ];
+
+  
+  if (!text || !sound || targets.includes(null)) {
+    console.error(" Ada ID yang tidak ditemukan");
+    return;
+  }
+
+  
+  targets.forEach(img => {
+    img.dataset.original = img.src;
+  });
+
+  let toggled = false;
+  let locked = false;
+  let audioUnlocked = false;
+
+  text.addEventListener("click", () => {
+    if (locked) return;
+    locked = true;
+
+    if (!audioUnlocked) {
+      sound.play().then(() => {
+        sound.pause();
+        sound.currentTime = 0;
+        audioUnlocked = true;
+      }).catch(() => {});
+    }
+
+    sound.pause();
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+
+    [...targets, text].forEach(el => {
+      el.classList.remove("show");
+      el.classList.add("hide");
+    });
+
+    setTimeout(() => {
+
+      
+      targets.forEach(img => {
+        img.src = toggled
+          ? img.dataset.original
+          : img.dataset.next;
+      });
+
+      text.textContent = toggled
+        ? "Klik disini :3"
+        : "Happy Birthday :3";
+
+      toggled = !toggled;
+
+      
+      [...targets, text].forEach(el => {
+        el.classList.remove("hide");
+        requestAnimationFrame(() => el.classList.add("show"));
+      });
+
+      locked = false;
+    }, 900);
+  });
+
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const trigger = document.getElementById("triggerText");
+
+  if (!trigger) return;
+
+  // buat paragraf baru
+  const newText = document.createElement("p");
+  newText.textContent = "Semoga panjang umur & bahagia ✨";
+  newText.style.color = "white";
+  newText.style.textAlign = "center";
+  newText.style.marginBottom = "0.8em";
+  newText.style.display = "none";
+
+  // masukkan tepat di atas "Klik disini"
+  trigger.parentNode.insertBefore(newText, trigger);
+
+  let visible = false;
+
+  trigger.addEventListener("click", () => {
+    visible = !visible;
+    newText.style.display = visible ? "block" : "none";
+  });
+});
+</script>
+-->
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const trigger = document.getElementById("triggerText");
+  const sound = document.getElementById("clickSound");
+
+  const targets = [
+    document.getElementById("mainImage"),
+    document.getElementById("orangeLeft"),
+    document.getElementById("orangeRight")
+  ];
+
+  if (!trigger || !sound || targets.includes(null)) return;
+
+  
+  const extraText = document.createElement("p");
+  extraText.textContent = "klik kue untuk melanjutkan";
+  extraText.className = "extra-text hide"; 
+  trigger.parentNode.insertBefore(extraText, trigger);
+
+  
+  targets.forEach(img => {
+    img.dataset.original = img.src;
+  });
+
+  let toggled = false;
+  let locked = false;
+
+  trigger.addEventListener("click", () => {
+    if (locked) return;
+    locked = true;
+
+    
+    sound.pause();
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+
+    
+    [...targets, trigger, extraText].forEach(el => {
+      el.classList.remove("show");
+      el.classList.add("hide");
+    });
+
+    setTimeout(() => {
+
+     
+      targets.forEach(img => {
+        img.src = toggled
+          ? img.dataset.original
+          : img.dataset.next;
+      });
+
+      
+      trigger.textContent = toggled
+        ? "Klik disini :3"
+        : "Happy Birthday :3";
+
+      toggled = !toggled;
+
+      [...targets, trigger, extraText].forEach(el => {
+        el.classList.remove("hide");
+        requestAnimationFrame(() => el.classList.add("show"));
+      });
+
+      locked = false;
+    }, 900);
+  });
+
+});
+</script>
+
+
+</body>
+</html>
