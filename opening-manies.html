@@ -390,7 +390,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+<audio src="music/_Yippee_Sound_Effect_48kbps.webm"
+        autoplay loop preload="auto" id="music"></audio>
+<script>
+  const resetBtn = document.querySelector("triggerText");
+  const resetSound = document.getElementById("resetSound");
+  const music = document.getElementById("music");
 
+  // 🔑 INI KUNCI UTAMA (trigger user interaction)
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.volume = 0.4;
+      music.play().catch(() => {});
+    }
+  }, { once: true });
+
+  // 🔘 RESET SOUND (SCRIPT KAMU, TETAP NORMAL)
+  resetBtn.addEventListener("click", () => {
+    resetSound.pause();
+    resetSound.currentTime = 0;
+    resetSound.play();
+  });
+</script>
 
 </body>
 </html>
