@@ -101,11 +101,12 @@ body {
 
 #hedlinecontainer {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
  top: 5vw;
 left: 50vw;
 
-  position: relative;
+  position: absolute;
 transform: translateX(-50%);
 }
 
@@ -141,12 +142,13 @@ transform: translateX(-50%);
 
 
   #shine {
-  font-size: 5.5vw;
+  font-size: 3vw;
   }
 
 #hedlinecontainer {
   display: flex;
- 
+  justify-content: center;
+  align-items: center;
 
   margin-bottom: 60px;
 }
