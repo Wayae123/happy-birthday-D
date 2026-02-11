@@ -122,6 +122,7 @@ transform: translateX(-50%);
   -webkit-animation-duration: 3s; /* Adjust the duration as needed */
   -webkit-animation-iteration-count: infinite;
   text-shadow: 0 0px 0px rgba(233, 85, 189, 0.419);
+  white-space: nowrap;
 
 }
 
