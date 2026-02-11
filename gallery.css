@@ -105,7 +105,7 @@ body {
  top: 5vw;
 left: 50vw;
 
-  position: absolute;
+  position: relative;
 transform: translateX(-50%);
 }
 
